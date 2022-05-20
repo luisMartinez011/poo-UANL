@@ -19,7 +19,13 @@ public class Main {
         Student estudiante = new Student(matricula, password, LocalDate.now());
         System.out.println(estudiante);
 
-        Calendario calendario = new Calendario(estudiante.getId());
-        System.out.println(calendario);
+        System.out.println("Ingrese la opcion que quiera consultar");
+        System.out.println("1. Organizador Academico ");
+        System.out.println("2. Organizador personal ");
+        System.out.println("3. Calendario ");
+        String opcion= sc.next();
+
+        Materias materias = new Materias(estudiante.getId());
+        System.out.println(materias);
     }
 }
